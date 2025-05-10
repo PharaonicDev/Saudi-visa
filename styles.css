@@ -1,10 +1,27 @@
+/* تعريف الخطوط */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap');
+
+/* إضافة الخطوط */
+@font-face {
+    font-family: 'Hajar';
+    src: url('https://cdn.fontshare.com/fonts/hajar/hajar-regular.woff2') format('woff2'),
+         url('https://cdn.fontshare.com/fonts/hajar/hajar-regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HT Baybars';
+    src: url('https://cdn.fontshare.com/fonts/ht-baybars/ht-baybars.woff2') format('woff2'),
+         url('https://cdn.fontshare.com/fonts/ht-baybars/ht-baybars.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Cairo', sans-serif;
 }
 
 :root {
@@ -14,9 +31,9 @@
 }
 
 body {
-    background-color: #f5f5f5;
-    color: var(--text-color);
+    font-family: 'Cairo', sans-serif;
     line-height: 1.6;
+    color: var(--text-color);
 }
 
 .container {
@@ -51,6 +68,8 @@ h2 {
     color: var(--primary-color);
     margin-bottom: 20px;
     text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
 }
 
 /* Features Grid */
@@ -146,6 +165,35 @@ footer {
 
 .rating span {
     font-size: 24px;
+}
+
+/* WhatsApp Icon */
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    z-index: 1000;
+    transition: transform 0.2s;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+}
+
+.whatsapp-icon i {
+    font-size: 35px;
 }
 
 /* Responsive Design */

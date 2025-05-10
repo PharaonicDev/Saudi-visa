@@ -4,7 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>خدمات التأشيرات السعودية</title>
+    <!-- إضافة خط Cairo من Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- إضافة Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- إضافة مكتبة SheetJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
     <header>
@@ -65,16 +73,16 @@
             <h2>تواصل معنا</h2>
             <div class="contact-form">
                 <form id="visaForm">
-                    <input type="text" placeholder="الاسم الكامل" required>
-                    <input type="tel" placeholder="رقم الجوال" required>
-                    <select required>
+                    <input type="text" id="fullName" name="fullName" placeholder="الاسم الكامل" required>
+                    <input type="tel" id="phone" name="phone" placeholder="رقم الجوال" required>
+                    <select id="visaType" name="visaType" required>
                         <option value="">نوع التأشيرة المطلوبة</option>
                         <option value="professional">تأشيرة مهنية</option>
                         <option value="domestic">تأشيرة عمالة منزلية</option>
                         <option value="business">تأشيرة تجارية</option>
                         <option value="tourism">تأشيرة سياحية</option>
                     </select>
-                    <textarea placeholder="تفاصيل الطلب"></textarea>
+                    <textarea id="details" name="details" placeholder="تفاصيل الطلب"></textarea>
                     <button type="submit">إرسال الطلب</button>
                 </form>
             </div>
@@ -90,6 +98,11 @@
             </div>
         </div>
     </footer>
+
+    <!-- إضافة أيقونة WhatsApp -->
+    <a href="https://wa.me/966508718279" class="whatsapp-icon" target="_blank" aria-label="تواصل معنا عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script src="script.js"></script>
 </body>
